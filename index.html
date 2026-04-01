@@ -27,11 +27,28 @@
       padding: 20px 0;
     }
 
+    /* Логотип с буквой ع */
     .logo {
+      display: flex;
+      align-items: center;
       font-weight: 700;
-      font-size: 24px;
+      font-size: 28px;
       letter-spacing: 1px;
-      color: #a855f7;
+      color: #e5e7eb;
+    }
+
+    .logo-symbol {
+      font-size: 36px;
+      font-weight: 900;
+      background: linear-gradient(90deg, #6366f1, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-right: 8px;
+      transition: 0.3s;
+    }
+
+    .logo:hover .logo-symbol {
+      transform: scale(1.2);
     }
 
     nav a {
@@ -69,21 +86,40 @@
       box-shadow: 0 20px 60px rgba(0,0,0,0.8);
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 30px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #6366f1, #a855f7);
+    /* Кнопка Telegram */
+    .btn.telegram-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 28px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #0088cc, #00c6ff);
       color: white;
       text-decoration: none;
       font-weight: 600;
-      transition: 0.3s;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,136,204,0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInBtn 1s forwards 0.5s;
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(99,102,241,0.5);
+    .btn.telegram-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 15px 25px rgba(0,136,204,0.5);
+    }
+
+    .btn.telegram-btn:active {
+      transform: translateY(-2px) scale(0.98);
+      box-shadow: 0 5px 15px rgba(0,136,204,0.3);
+    }
+
+    @keyframes fadeInBtn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     section {
@@ -147,11 +183,13 @@
 <div class="container">
 
 <header>
-  <div class="logo">Абдурахман</div>
+  <div class="logo">
+    <span class="logo-symbol">ع</span> Abdurahman
+  </div>
   <nav>
     <a href="#about">Обо мне</a>
     <a href="#projects">Проекты</a>
-    <a href="#contact">Контакты</a>
+    <a href="#contact">Связаться через Telegram</a>
   </nav>
 </header>
 
@@ -159,7 +197,12 @@
   <div>
     <h1>Привет, я Абдурахман</h1>
     <p>Мне 20 лет, я темщик. Создаю стильные сайты и интерфейсы. Минимализм, детали и качество — мой подход.</p>
-    <a href="#contact" class="btn">Связаться</a>
+    <a href="https://t.me/abqurahman" class="btn telegram-btn" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24" style="margin-right:8px;">
+        <path d="M12 0C5.372 0 0 5.373 0 12c0 6.627 5.372 12 12 12 6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zm5.287 8.103l-1.69 7.968c-.128.555-.462.687-.938.428l-2.596-1.914-1.25 1.204c-.138.137-.254.254-.521.254l.187-2.64 4.81-4.36c.208-.187-.045-.292-.32-.105l-5.942 3.73-2.558-.799c-.555-.174-.567-.555.115-.823l10.01-3.865c.462-.174.867.105.722.803z"/>
+      </svg>
+      Связаться через Telegram
+    </a>
   </div>
   <img src="avatar.jpg" alt="avatar">
 </div>
@@ -193,9 +236,6 @@
 </footer>
 
 </div>
-
-</body>
-</html>
 
 </body>
 </html>
