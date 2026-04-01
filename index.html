@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Портфолио Абдурахмана</title>
+  <title>Abdurahman</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -13,55 +13,21 @@
       color: #e5e7eb;
       line-height: 1.6;
     }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
+    .container { max-width: 1100px; margin: auto; padding: 20px; }
 
     header {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       padding: 20px 0;
     }
-
-    /* Логотип с буквой ع */
     .logo {
-      display: flex;
-      align-items: center;
       font-weight: 700;
       font-size: 28px;
-      letter-spacing: 1px;
       color: #e5e7eb;
     }
 
-    .logo-symbol {
-      font-size: 36px;
-      font-weight: 900;
-      background: linear-gradient(90deg, #6366f1, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-right: 8px;
-      transition: 0.3s;
-    }
-
-    .logo:hover .logo-symbol {
-      transform: scale(1.2);
-    }
-
-    nav a {
-      color: #aaa;
-      text-decoration: none;
-      margin-left: 20px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #fff;
-    }
-
+    /* Hero */
     .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -69,24 +35,74 @@
       gap: 40px;
       padding: 60px 0;
     }
-
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
+    .hero h1, .hero p {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
     }
-
-    .hero p {
-      color: #9ca3af;
-      font-size: 18px;
-    }
-
+    .hero h1 { animation-delay: 0.2s; font-size: 48px; margin-bottom: 20px; }
+    .hero p { animation-delay: 0.5s; color: #9ca3af; font-size: 18px; }
     .hero img {
       width: 100%;
       border-radius: 20px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.8);
     }
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-    /* Кнопка Telegram */
+    section { margin-top: 80px; }
+    h2 { font-size: 32px; margin-bottom: 20px; color: #fff; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 20px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .card h3 { color: #a855f7; margin-bottom: 10px; }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(168,85,247,0.5);
+      box-shadow: 0 10px 20px rgba(168,85,247,0.2);
+    }
+
+    /* Контакты */
+    .contacts {
+      margin-top: 60px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: all 0.3s ease;
+    }
+    .contacts:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(0,198,255,0.3); }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 18px;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    .contact-item:hover { color: #00c6ff; }
+    .contact-item svg { width: 24px; height: 24px; fill: #00c6ff; flex-shrink: 0; }
+
     .btn.telegram-btn {
       display: inline-flex;
       align-items: center;
@@ -99,62 +115,11 @@
       font-weight: 600;
       font-size: 16px;
       transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0,136,204,0.3);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInBtn 1s forwards 0.5s;
+      align-self: center;
     }
-
     .btn.telegram-btn:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 15px 25px rgba(0,136,204,0.5);
-    }
-
-    .btn.telegram-btn:active {
-      transform: translateY(-2px) scale(0.98);
-      box-shadow: 0 5px 15px rgba(0,136,204,0.3);
-    }
-
-    @keyframes fadeInBtn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    section {
-      margin-top: 80px;
-    }
-
-    h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(10px);
-      padding: 20px;
-      border-radius: 20px;
-      transition: 0.3s;
-    }
-
-    .card h3 {
-      color: #a855f7;
-      margin-bottom: 10px;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(168,85,247,0.5);
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,136,204,0.5);
     }
 
     footer {
@@ -165,16 +130,9 @@
     }
 
     @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      nav {
-        margin-top: 10px;
-      }
-      .hero img {
-        margin-top: 20px;
-      }
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero img { margin-top: 20px; }
+      .contacts { max-width: 100%; }
     }
   </style>
 </head>
@@ -182,60 +140,60 @@
 
 <div class="container">
 
-<header>
-  <div class="logo">
-    <span class="logo-symbol">ع</span> Abdurahman
-  </div>
-  <nav>
-    <a href="#about">Обо мне</a>
-    <a href="#projects">Проекты</a>
-    <a href="#contact">Связаться через Telegram</a>
-  </nav>
-</header>
+  <header>
+    <div class="logo">Abdurahman</div>
+  </header>
 
-<div class="hero">
-  <div>
-    <h1>Привет, я Абдурахман</h1>
-    <p>Мне 20 лет, я темщик. Создаю стильные сайты и интерфейсы. Минимализм, детали и качество — мой подход.</p>
-    <a href="https://t.me/abqurahman" class="btn telegram-btn" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24" style="margin-right:8px;">
-        <path d="M12 0C5.372 0 0 5.373 0 12c0 6.627 5.372 12 12 12 6.627 0 12-5.373 12-12C24 5.373 18.627 0 12 0zm5.287 8.103l-1.69 7.968c-.128.555-.462.687-.938.428l-2.596-1.914-1.25 1.204c-.138.137-.254.254-.521.254l.187-2.64 4.81-4.36c.208-.187-.045-.292-.32-.105l-5.942 3.73-2.558-.799c-.555-.174-.567-.555.115-.823l10.01-3.865c.462-.174.867.105.722.803z"/>
+  <div class="hero">
+    <div>
+      <h1>Привет, я Абдурахман</h1>
+      <p>Мне 20 лет, я темщик. Создаю стильные сайты и интерфейсы. Минимализм, детали и качество — мой подход.</p>
+    </div>
+    <img src="avatar.jpg" alt="avatar">
+  </div>
+
+  <section id="about">
+    <h2>Обо мне</h2>
+    <p>Я занимаюсь веб-разработкой и дизайном интерфейсов. Люблю минимализм и четкие детали. Всегда учусь новому и развиваю свои навыки.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Проекты</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Проект 1</h3>
+        <p>В процессе разработки</p>
+      </div>
+      <div class="card">
+        <h3>Проект 2</h3>
+        <p>В процессе разработки</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts" id="contact">
+    <h2>Контакты</h2>
+    <div class="contact-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.58.57 1 1 0 011 1v3.62a1 1 0 01-1 1C10.07 22 2 13.93 2 4a1 1 0 011-1h3.62a1 1 0 011 1c0 1.25.2 2.48.57 3.58a1 1 0 01-.21 1.11l-2.36 2.1z"/>
       </svg>
-      Связаться через Telegram
-    </a>
-  </div>
-  <img src="avatar.jpg" alt="avatar">
-</div>
-
-<section id="about">
-  <h2>Обо мне</h2>
-  <p>Я занимаюсь веб-разработкой и дизайном интерфейсов. Люблю минимализм и четкие детали. Всегда учусь новому и развиваю свои навыки.</p>
-</section>
-
-<section id="projects">
-  <h2>Проекты</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Проект 1</h3>
-      <p>В процессе разработки</p>
+      <span>+7 926 531 7911</span>
     </div>
-    <div class="card">
-      <h3>Проект 2</h3>
-      <p>В процессе разработки</p>
+    <div class="contact-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 13.065l-12-7.065v14h24v-14l-12 7.065zm0-11.065l12 7.065-12 7.065-12-7.065 12-7.065z"/>
+      </svg>
+      <span>abdurahmandzuraev3@gmail.com</span>
     </div>
-  </div>
-</section>
+    <a href="https://t.me/abqurahman" target="_blank" class="btn telegram-btn">Telegram</a>
+  </section>
 
-<section id="contact">
-  <h2>Контакты</h2>
-  <p>Email: email@mail.com</p>
-</section>
-
-<footer>
-  <p>© 2026 Абдурахман</p>
-</footer>
+  <footer>
+    <p>© 2026 Абдурахман</p>
+  </footer>
 
 </div>
 
 </body>
 </html>
+
