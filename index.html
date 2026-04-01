@@ -3,33 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Портфолио</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0a0a0a;
-      color: white;
-      text-align: center;
-    }
-
-    header {
-      padding: 40px 20px;
-    }
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Портфолио</title>
+  <title>Портфолио Абдурахмана</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       font-family: 'Inter', Arial, sans-serif;
       background: radial-gradient(circle at 20% 20%, #111 0%, #050505 60%);
       color: #e5e7eb;
+      line-height: 1.6;
     }
 
     .container {
@@ -40,14 +22,16 @@
 
     header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding: 20px 0;
     }
 
     .logo {
       font-weight: 700;
+      font-size: 24px;
       letter-spacing: 1px;
+      color: #a855f7;
     }
 
     nav a {
@@ -58,7 +42,7 @@
     }
 
     nav a:hover {
-      color: white;
+      color: #fff;
     }
 
     .hero {
@@ -71,12 +55,12 @@
 
     .hero h1 {
       font-size: 48px;
-      margin: 0 0 20px;
+      margin-bottom: 20px;
     }
 
     .hero p {
       color: #9ca3af;
-      line-height: 1.6;
+      font-size: 18px;
     }
 
     .hero img {
@@ -88,16 +72,17 @@
     .btn {
       display: inline-block;
       margin-top: 20px;
-      padding: 12px 24px;
+      padding: 12px 30px;
       border-radius: 999px;
       background: linear-gradient(90deg, #6366f1, #a855f7);
       color: white;
       text-decoration: none;
+      font-weight: 600;
       transition: 0.3s;
     }
 
     .btn:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
       box-shadow: 0 10px 30px rgba(99,102,241,0.5);
     }
 
@@ -106,8 +91,9 @@
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 32px;
       margin-bottom: 20px;
+      color: #fff;
     }
 
     .cards {
@@ -125,6 +111,11 @@
       transition: 0.3s;
     }
 
+    .card h3 {
+      color: #a855f7;
+      margin-bottom: 10px;
+    }
+
     .card:hover {
       transform: translateY(-5px);
       border-color: rgba(168,85,247,0.5);
@@ -140,6 +131,13 @@
     @media (max-width: 768px) {
       .hero {
         grid-template-columns: 1fr;
+        text-align: center;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      .hero img {
+        margin-top: 20px;
       }
     }
   </style>
@@ -149,7 +147,7 @@
 <div class="container">
 
 <header>
-  <div class="logo">PORTFOLIO</div>
+  <div class="logo">Абдурахман</div>
   <nav>
     <a href="#about">Обо мне</a>
     <a href="#projects">Проекты</a>
@@ -159,8 +157,8 @@
 
 <div class="hero">
   <div>
-    <h1>Твоё имя</h1>
-    <p>Создаю стильные сайты и интерфейсы. Минимализм, детали и качество — мой подход.</p>
+    <h1>Привет, я Абдурахман</h1>
+    <p>Мне 20 лет, я темщик. Создаю стильные сайты и интерфейсы. Минимализм, детали и качество — мой подход.</p>
     <a href="#contact" class="btn">Связаться</a>
   </div>
   <img src="avatar.jpg" alt="avatar">
@@ -168,7 +166,7 @@
 
 <section id="about">
   <h2>Обо мне</h2>
-  <p>Напиши здесь о себе: чем занимаешься, какие навыки, опыт и цели.</p>
+  <p>Я занимаюсь веб-разработкой и дизайном интерфейсов. Люблю минимализм и четкие детали. Всегда учусь новому и развиваю свои навыки.</p>
 </section>
 
 <section id="projects">
@@ -176,11 +174,11 @@
   <div class="cards">
     <div class="card">
       <h3>Проект 1</h3>
-      <p>Описание проекта</p>
+      <p>В процессе разработки</p>
     </div>
     <div class="card">
       <h3>Проект 2</h3>
-      <p>Описание проекта</p>
+      <p>В процессе разработки</p>
     </div>
   </div>
 </section>
@@ -191,10 +189,13 @@
 </section>
 
 <footer>
-  <p>© 2026</p>
+  <p>© 2026 Абдурахман</p>
 </footer>
 
 </div>
+
+</body>
+</html>
 
 </body>
 </html>
